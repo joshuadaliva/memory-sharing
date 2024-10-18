@@ -51,11 +51,11 @@ export default function Main() {
           const backgroundColor = focused ? '#7c3aed' : 'transparent'; 
           return (
             <View style={[styles.iconContainer, { backgroundColor }]}>
-              {route.name === 'Home' && <Home color={color} size={size} />}
-              {route.name === 'Search' && <Search color={color} size={size} />}
-              {route.name === 'Add' && <Plus color={color} size={size} />}
-              {route.name === 'Favorite' && <Heart color={color} size={size} />}
-              {route.name === 'Profile' && <User color={color} size={size} />}
+              {route.name === 'HomeTab' && <Home color={color} size={size} />}
+              {route.name === 'SearchTab' && <Search color={color} size={size} />}
+              {route.name === 'AddTab' && <Plus color={color} size={size} />}
+              {route.name === 'FavoriteTab' && <Heart color={color} size={size} />}
+              {route.name === 'ProfileTab' && <User color={color} size={size} />}
             </View>
           );
         },
@@ -64,11 +64,11 @@ export default function Main() {
         tabBarStyle: styles.tabBarStyle,
       })}
     >
-      <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Search" component={SearchStack} />
-      <Tab.Screen name="Add" component={AddStack} />
-      <Tab.Screen name="Favorite" component={FavoriteStack} />
-      <Tab.Screen name="Profile" component={ProfileStack} />
+      <Tab.Screen name="HomeTab" component={HomeStack} />
+      <Tab.Screen name="SearchTab" component={SearchStack} />
+      <Tab.Screen name="AddTab" component={AddStack} />
+      <Tab.Screen name="FavoriteTab" component={FavoriteStack} />
+      <Tab.Screen name="ProfileTab" component={ProfileStack} />
     </Tab.Navigator>
   );
 }

@@ -139,7 +139,7 @@ const Login = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
+      <StatusBar barStyle="auto" />
     </SafeAreaView>
   );
 };

@@ -80,9 +80,10 @@ const HomePost = ({ navigation }) => {
       </View>
       <View style={styles.userInfo}>
         <Image
-          source={{ uri: item.userProfile }}
-          style={styles.userImage}
-        />
+            source={require("../assets/me.png")}
+            style={styles.userImage}
+            resizeMode="cover"
+          />
         <View style={styles.userDetails}>
           <Text style={styles.username}>{item.username}</Text>
           <View style={styles.locationContainer}>
@@ -113,7 +114,7 @@ const HomePost = ({ navigation }) => {
         contentContainerStyle={styles.container}
         showsVerticalScrollIndicator={false}
       />
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="auto" />
     </View>
   );
 };
@@ -122,6 +123,8 @@ const styles = StyleSheet.create({
   container1: {
     flex: 1,
     alignItems: "center",
+    paddingBottom:50,
+    paddingTop:10
   },
   container: {
     paddingHorizontal: 10,

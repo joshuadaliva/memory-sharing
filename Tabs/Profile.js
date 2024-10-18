@@ -7,9 +7,10 @@ const Profile = () => {
     <View style={styles.container}>
       <View style={styles.container1}>
       <Image
-        source={{ uri: 'https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
-        style={styles.profileImage}
-      />
+            source={require("../assets/me.png")}
+            style={styles.profileImage}
+            resizeMode="cover"
+          />
       
       <Text style={styles.username}>Joshua Daliva</Text>
       
@@ -55,18 +56,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#F5F5F5',
-    paddingTop:60
   },
   container1:{
     flex:1,
     alignItems:'center',
     width:'100%',
-    padding: 20,
+    padding: 10,
   },
   profileImage: {
     width: 100,
     height: 100,
-    borderRadius: 50,
+    borderRadius: 100,
     marginBottom: 10,
   },
   username: {

@@ -1,4 +1,4 @@
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, View ,Text} from 'react-native';
 
 const image = require('../assets/samplemap.png');
 

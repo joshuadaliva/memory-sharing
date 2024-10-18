@@ -1,4 +1,4 @@
-import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, TextInput, TouchableOpacity, Text, StyleSheet, StatusBar } from 'react-native';
 import { PlusCircle, MapPin } from 'lucide-react-native'; 
 
 const AddPost = () => {
@@ -25,6 +25,8 @@ const AddPost = () => {
       <TouchableOpacity style={{backgroundColor: "#7c3aed", alignItems:'center', padding: 10, borderRadius: 10}}>
         <Text style={{color:'white'}}> Post </Text>
       </TouchableOpacity>
+
+      <StatusBar barStyle="auto" />
     </View>
   );
 };
