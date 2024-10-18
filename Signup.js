@@ -68,7 +68,11 @@ const SignUp = ({ navigation }) => {
         >
           <View style={{ flexDirection: "column", width: "96%" }}>
             <Text
-              style={{ marginBottom : 5 , fontSize: 15, color: isDarkMode ? "white" : "#030712" }}
+              style={{
+                marginBottom: 5,
+                fontSize: 15,
+                color: isDarkMode ? "white" : "#030712",
+              }}
             >
               Enter your Username:
             </Text>
@@ -94,7 +98,7 @@ const SignUp = ({ navigation }) => {
             >
               <Text
                 style={{
-                  marginBottom : 5,
+                  marginBottom: 5,
                   fontSize: 15,
                   color: isDarkMode ? "white" : "#030712",
                 }}
@@ -124,7 +128,7 @@ const SignUp = ({ navigation }) => {
             >
               <Text
                 style={{
-                  marginBottom : 5,
+                  marginBottom: 5,
                   fontSize: 15,
                   color: isDarkMode ? "white" : "#030712",
                 }}

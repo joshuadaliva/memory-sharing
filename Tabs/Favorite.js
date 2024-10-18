@@ -17,7 +17,8 @@ const posts = [
       "https://images.pexels.com/photos/693269/pexels-photo-693269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     caption:
       "Food is not just fuel; it's an experience that nourishes the soul. Gather around the table and let's make every bite count! 🍕✨",
-    userProfile: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    userProfile:
+      "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     username: "Joshua Daliva",
     location: "City Center",
   },
@@ -28,7 +29,8 @@ const posts = [
       "https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     caption:
       "Every journey is a reminder of how vast and beautiful the world is. My heart belongs to the open road and the endless possibilities it brings! 🌍✨",
-    userProfile: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    userProfile:
+      "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     username: "Joshua Daliva",
     location: "Beachside",
   },
@@ -39,7 +41,8 @@ const posts = [
       "https://images.pexels.com/photos/28868779/pexels-photo-28868779/free-photo-of-vibrant-coastal-sunset-with-splashing-waves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     caption:
       "There’s nothing quite like the sound of waves and the feeling of sand between my toes. Beach days are my happy days! 🏖️☀️",
-    userProfile: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    userProfile:
+      "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     username: "Joshua Daliva",
     location: "Sunny Beach",
   },
@@ -50,7 +53,8 @@ const posts = [
       "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     caption:
       "The mountains are calling, and I must go! There's a sense of peace and adventure that comes with every hike. ⛰️🌲",
-    userProfile: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    userProfile:
+      "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     username: "Joshua Daliva",
     location: "Mountain Peak",
   },
@@ -61,7 +65,8 @@ const posts = [
       "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     caption:
       "Every new place I visit teaches me something different about the world and its people. Embracing diversity enriches my travel experience! 🌎🤝",
-    userProfile: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+    userProfile:
+      "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     username: "Joshua Daliva",
     location: "Cultural District",
   },
@@ -70,20 +75,19 @@ const posts = [
 const HomePost = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <View style={styles.postContainer}>
-      
-      <View style={{padding:10}}>
+      <View style={{ padding: 10 }}>
         <Image
-        source={{ uri: item.image }}
-        style={styles.postImage}
-        resizeMode="cover"
-      />
+          source={{ uri: item.image }}
+          style={styles.postImage}
+          resizeMode="cover"
+        />
       </View>
       <View style={styles.userInfo}>
         <Image
-            source={require("../assets/me.png")}
-            style={styles.userImage}
-            resizeMode="cover"
-          />
+          source={require("../assets/me.png")}
+          style={styles.userImage}
+          resizeMode="cover"
+        />
         <View style={styles.userDetails}>
           <Text style={styles.username}>{item.username}</Text>
           <View style={styles.locationContainer}>
@@ -99,7 +103,7 @@ const HomePost = ({ navigation }) => {
           <Heart size={24} strokeWidth={2} color="red" />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Star size={24} strokeWidth={2} color="orange" fill='orange' />
+          <Star size={24} strokeWidth={2} color="orange" fill="orange" />
         </TouchableOpacity>
       </View>
     </View>
@@ -123,8 +127,8 @@ const styles = StyleSheet.create({
   container1: {
     flex: 1,
     alignItems: "center",
-    paddingBottom:50,
-    paddingTop:10
+    paddingBottom: 50,
+    paddingTop: 10,
   },
   container: {
     paddingHorizontal: 10,

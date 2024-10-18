@@ -4,8 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { useStore } from "./store/useStore";
 
 const Getstarted = ({ navigation }) => {
-
-  const isDarkMode = useStore(state => state.background)
+  const isDarkMode = useStore((state) => state.background);
 
   return (
     <SafeAreaView
@@ -14,7 +13,7 @@ const Getstarted = ({ navigation }) => {
         justifyContent: "center",
         position: "relative",
         flex: 1,
-        backgroundColor: isDarkMode ? '#030712' : "#ffffff",
+        backgroundColor: isDarkMode ? "#030712" : "#ffffff",
       }}
     >
       <View
@@ -40,7 +39,13 @@ const Getstarted = ({ navigation }) => {
             justifyContent: "center",
           }}
         >
-          <Text style={{ fontSize: 30, color: isDarkMode ? "white" : "black", textAlign: "center" }}>
+          <Text
+            style={{
+              fontSize: 30,
+              color: isDarkMode ? "white" : "black",
+              textAlign: "center",
+            }}
+          >
             Share Your Memories location Online
           </Text>
           <Text style={{ textAlign: "center", color: "gray" }}>

@@ -11,13 +11,7 @@ import {
   ActivityIndicator,
   SafeAreaView,
 } from "react-native";
-import {
-  User,
-  Lock,
-  ArrowRightCircle,
-  Eye,
-  EyeOff,
-} from "lucide-react-native"; 
+import { User, Lock, ArrowRightCircle, Eye, EyeOff } from "lucide-react-native";
 
 const Login = ({ navigation }) => {
   const [username, setUsername] = useState("");
@@ -66,7 +60,11 @@ const Login = ({ navigation }) => {
         >
           <View style={{ flexDirection: "column", width: "96%" }}>
             <Text
-              style={{ marginBottom : 5 , fontSize: 15, color: isDarkMode ? "white" : "#030712" }}
+              style={{
+                marginBottom: 5,
+                fontSize: 15,
+                color: isDarkMode ? "white" : "#030712",
+              }}
             >
               Enter your Username:
             </Text>
@@ -90,7 +88,7 @@ const Login = ({ navigation }) => {
             >
               <Text
                 style={{
-                  marginBottom : 5 ,
+                  marginBottom: 5,
                   fontSize: 15,
                   color: isDarkMode ? "white" : "#030712",
                 }}
