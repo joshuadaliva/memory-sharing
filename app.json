@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "ITA213_2A_DALIVA_MEMORY_SHARING",
-    "slug": "ITA213_2A_DALIVA_MEMORY_SHARING",
+    "name": "memory-sharingv2",
+    "slug": "memory-sharingv2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
