@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "./store/useStore";
 import getStyle from "./styles";
 import BgMode from "./component/BgMode";
@@ -19,6 +19,7 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react-native";
+import addUser  from './database_actions/addUser';
 
 const SignUp = ({ navigation }) => {
   const [username, setUsername] = useState("");
@@ -26,15 +27,27 @@ const SignUp = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [isSignedUp, setIsSignedUp] = useState(false);
   const isDarkMode = useStore((state) => state.background);
 
-  const handleSignUp = () => {
-    setLoading(true);
-    setTimeout(() => {
+
+  const handleSignUp = async () => {
+    try {
+      setLoading(true);
+      const signup = await addUser (username, email, password);
+      setIsSignedUp(signup);
+    } catch (error) {
+      console.error(error);
+    } finally {
       setLoading(false);
-      navigation.navigate("Login");
-    }, 100);
+    }
   };
+  
+  
+  if(isSignedUp){
+    navigation.navigate("Login")
+    setIsSignedUp(false);
+  }
 
   const styles = getStyle(isDarkMode);
 
@@ -77,7 +90,7 @@ const SignUp = ({ navigation }) => {
               Enter your Username:
             </Text>
             <View style={styles.inputContainer}>
-              <User color="gray" size={20} />
+              <User  color="gray" size={20} />
               <TextInput
                 style={styles.input}
                 placeholder="Username"
@@ -119,7 +132,7 @@ const SignUp = ({ navigation }) => {
               />
             </View>
             <View
-              style={{
+ style={{
                 marginBottom: 5,
                 flexDirection: "row",
                 alignItems: "start",

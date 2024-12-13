@@ -12,21 +12,37 @@ import {
   SafeAreaView,
 } from "react-native";
 import { User, Lock, ArrowRightCircle, Eye, EyeOff } from "lucide-react-native";
+import login from "./database_actions/login";
 
 const Login = ({ navigation }) => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const isDarkMode = useStore((state) => state.background);
+  const [isLogin, setIsLogin] = useState(false)
 
-  const handleSignUp = () => {
-    setLoading(true);
+  const handleSignUp = async () => {
+    try {
+      setLoading(true);
+      const resultLogin = await login (email,password);
+      setIsLogin(resultLogin);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  if(isLogin){
     setTimeout(() => {
       setLoading(false);
       navigation.navigate("Main");
     }, 100);
-  };
+  }
+  else{
+    setTimeout(() => {
+      setLoading(false);
+    }, 100);
+  }
 
   const styles = getStyle(isDarkMode);
 
@@ -66,16 +82,16 @@ const Login = ({ navigation }) => {
                 color: isDarkMode ? "white" : "#030712",
               }}
             >
-              Enter your Username:
+              Enter your Email:
             </Text>
             <View style={styles.inputContainer}>
               <User color="gray" size={20} />
               <TextInput
                 style={styles.input}
-                placeholder="Username"
+                placeholder="Email"
                 placeholderTextColor="gray"
-                value={username}
-                onChangeText={setUsername}
+                value={email}
+                onChangeText={setEmail}
               />
             </View>
             <View
